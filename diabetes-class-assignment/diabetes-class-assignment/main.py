@@ -10,7 +10,7 @@ def main():
     print(data.info())
 
     histogram(data,[
-        "Diabetes_binary","HighBP","HighChol","CholCheck",
+        " BMI","GenHlth","Age","Education","Income"
     ])
 
 def get_absolute_path(relative_path):
