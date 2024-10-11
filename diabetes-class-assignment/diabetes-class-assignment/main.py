@@ -22,7 +22,8 @@ def load_dataframe(path):
     return pd.read_csv(get_absolute_path(path))
 
 def histogram(data, attributes):
-    data[attributes].hist(bins=50, figsize=(20, 20))
+    data[attributes].hist(figsize=(16, 12), bins=30, edgecolor='black')
+    plt.tight_layout()
     plt.show()
 
 
