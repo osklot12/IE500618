@@ -208,3 +208,5 @@ def histogram(data, attributes):
 
 if __name__ == "__main__":
     main()
+
+# Test
