@@ -10,8 +10,9 @@ def main():
     print(data.info())
 
     histogram(data,[
-        " BMI","GenHlth","Age","Education","Income"
+        "BMI","GenHlth","Age","Education","Income"
     ])
+    print(corr_matrix(data)["Diabetes_binary"].sort_values(ascending=False))
 
 def get_absolute_path(relative_path):
     base_path = os.path.dirname(__file__)
@@ -26,6 +27,13 @@ def histogram(data, attributes):
     plt.tight_layout()
     plt.show()
 
+def corr_matrix(data):
+    return data.corr()
+
+# Create a heatmap of correlations
+#sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', vmin=-1, vmax=1)
+#plt.title('Correlation Heatmap of Selected Features')
+#plt.show()
 
 if __name__ == "__main__":
     main()
